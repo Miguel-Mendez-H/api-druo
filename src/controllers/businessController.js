@@ -20,22 +20,26 @@ const businessController = {
     if (businessName) {
         return res.status(400).json({
             status: 400,
-            message: "Error en el campo negocio",
+            message: "Business name already exists",
         });
     }
 
     try {
       const business = await Business.create(req.body);
-      res.status(201).json({
+      return res.status(200).json({
         id: business.id,
         data: business,
         status: 201,
       });
     } catch (error) {
-      res.status(500).json({
-        status: 500,
-        message: error.message,
-      });
+        if (res) {
+          res.status(500).json({
+            status: 500,
+            message: error.message,
+          });
+        } else {
+          console.error(`Error: ${error.message}`);
+        }
     }
   },
 
