@@ -1,0 +1,26 @@
+#Example .env file
+
+# PostgreSQL Configuration
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=postgres
+DB_USERNAME=postgres
+DB_PASSWORD="password here"
+
+TEST_DB_USERNAME=postgres
+TEST_DB_PASSWORD="password here"
+TEST_DB_NAME=postgres
+TEST_DB_HOST=localhost
+TEST_DB_PORT=5432
+
+PROD_DB_USERNAME=postgres
+PROD_DB_PASSWORD="password here"
+PROD_DB_NAME=postgres
+PROD_DB_HOST=localhost
+PROD_DB_PORT=5432
+
+# defino si es development, test o production
+NODE_ENV=development
+
+
+
